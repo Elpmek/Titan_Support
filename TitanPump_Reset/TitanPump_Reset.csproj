@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25FBCC7B-0660-40D1-8184-3DF892A5B181}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TitanPump_Reset</RootNamespace>
+    <AssemblyName>TitanPump_Reset</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationUpdaterCommon">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\ApplicationUpdaterCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.Common">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.Diagnostics">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.DropletAnalysis">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.DropletAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareAutomation">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareComms">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareComms.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareControl">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareDefinition">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareDefinition.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareInterfaces">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.HardwareSnapshot">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.HardwareSnapshot.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.MessageModel">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.MessageModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Blacktrace.Scripting">
+      <HintPath>..\..\..\..\..\..\Program Files\Dolomite\Dolomite Flow Control Center\Blacktrace.Scripting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TitanPump_SerialReset.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
